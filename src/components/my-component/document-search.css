@@ -136,19 +136,22 @@
 
 /* Selected option pills */
 .choices__item--selectable {
-  background-color: #ede9fe;
-  color: #5b21b6;
+  background-color: #5b21b6 !important;
+  color: white !important;
   border-radius: 16px;
   padding: 4px 10px;
   margin: 2px;
   font-weight: 500;
+}
+.choices__item--selectable:hover{
+   color:white !important;
 }
 
 /* Cross button inside pills */
 .choices__item--selectable .choices__button {
   background: none;
   border: none;
-  color: #5b21b6;
+  color:  white;
   font-size: 16px;
   padding-left: 4px;
   cursor: pointer;
