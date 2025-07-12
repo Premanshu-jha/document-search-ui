@@ -43,15 +43,16 @@
 /* Grid layout for fields */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px; /* Increased gap for better vertical and horizontal spacing */
   padding: 24px;
 }
+
 
 /* Input styling */
 .input {
   width: 100%;
-  padding: 10px 12px;
+  padding: 6px 10px;
   border: 1px solid #d1d5db;
   border-radius: 6px;
   font-size: 0.95rem;
@@ -107,6 +108,7 @@
 
 /* Make the input field more modern */
 /* Input styling */
+/* Main visible input area */
 .choices__inner {
   background-color: #f9fafb;
   border: 1px solid #d1d5db;
@@ -116,7 +118,21 @@
   font-size: 14px;
   display: flex;
   align-items: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
 }
+
+/* Fix for only-right-border-visible issue */
+.choices__inner:hover {
+  border-color: #a0aec0;
+}
+
+.choices__inner:focus,
+.choices__inner.is-focused {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
 
 /* Selected option pills */
 .choices__item--selectable {
